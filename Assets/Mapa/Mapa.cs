@@ -3,29 +3,29 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public class RadarObject
+public class MapaObject
 {
     public Image icon { get; set; }
     public GameObject owner { get; set; }
 }
 
-public class Radar : MonoBehaviour
+public class Mapa : MonoBehaviour
 {
     public Transform playerPos;
 
     float mapScale = 2.0f;
 
-    public static List<RadarObject> radObjects = new List<RadarObject>();
+    public static List<MapaObject> radObjects = new List<MapaObject>();
 
     public static void RegisterRadarObject(GameObject o, Image i)
     {
         Image image = Instantiate(i);
-        radObjects.Add(new RadarObject() { owner = o, icon = image });
+        radObjects.Add(new MapaObject() { owner = o, icon = image });
     }
 
-    public static void RemoveRadarObject(GameObject o)
+    public static void RemoveMapaObject(GameObject o)
     {
-        List<RadarObject> newList = new List<RadarObject>();
+        List<MapaObject> newList = new List<MapaObject>();
         for (int i = 0; i < radObjects.Count; i++)
         {
             if (radObjects[i].owner == o)
@@ -43,7 +43,7 @@ public class Radar : MonoBehaviour
 
     void DrawRadarDots()
     {
-        foreach (RadarObject ro in radObjects)
+        foreach (MapaObject ro in radObjects)
         {
             Vector3 radarPos = (ro.owner.transform.position - playerPos.position);
             float distToObject = Vector3.Distance(playerPos.position, ro.owner.transform.position) * mapScale;
@@ -72,7 +72,7 @@ public class Radar : MonoBehaviour
 
     public void ItemPickedUp(GameObject go)
     {
-        RemoveRadarObject(go);
+        RemoveMapaObject(go);
     }
 
 }
