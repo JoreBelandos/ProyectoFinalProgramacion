@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 5856996076769805133}
   - component: {fileID: 1126417800217227978}
   - component: {fileID: 560768440017686247}
+  - component: {fileID: -992847397575414917}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: SpherePrefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,3 +112,15 @@ MonoBehaviour:
   dropped: {fileID: 11400000, guid: 3a323622349424f86a850ff852c146c5, type: 2}
   pickup: {fileID: 11400000, guid: 09cbe1b63f5f443509cc5717b6f9fa00, type: 2}
   icon: {fileID: 3587178014659421260, guid: 1c3646f051fd1ac41b81e4f18099dd46, type: 3}
+--- !u!114 &-992847397575414917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4193215872315143457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78bdd663f26f8754495adfb79f276a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
