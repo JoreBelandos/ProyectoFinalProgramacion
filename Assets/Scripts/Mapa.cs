@@ -52,7 +52,7 @@ public class Mapa : MonoBehaviour
         foreach (MapaObject ro in radObjects)
         {
             //Pintamos los objetos de la lista en el mapa
-            Vector3 radarPos = (ro.owner.transform.position - playerPos.position);
+            Vector3 radarPos = ro.owner.transform.position - playerPos.position;
             float distToObject = Vector3.Distance(playerPos.position, ro.owner.transform.position) * mapScale;
             float deltay = Mathf.Atan2(radarPos.x, radarPos.z) * Mathf.Rad2Deg - 270 - playerPos.eulerAngles.y;
             radarPos.x = distToObject * Mathf.Cos(deltay * Mathf.Deg2Rad) * -1;
