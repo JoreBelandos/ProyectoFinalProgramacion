@@ -43,7 +43,6 @@ public class PuntosyTiempo : MonoBehaviour
             record.text = "Puntuacion: " + puntos;
             //Time.timeScale = 0;
             gamestart = false;
-            ranking.GetComponent<RankingManager>().InsertarPuntos(puntos);
         }
     }
     public void activateGame()
@@ -51,4 +50,9 @@ public class PuntosyTiempo : MonoBehaviour
         gamestart = true;
     }
 
+    public void guardarPuntos()
+    {
+        ranking.GetComponent<RankingManager>().InsertarPuntos(puntos);
+
+    }
 }

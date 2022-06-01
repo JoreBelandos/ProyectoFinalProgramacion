@@ -111,14 +111,14 @@ public class RankingManager : MonoBehaviour
         AbrirDB();
         // Crear la consulta
         dbCommand = dbConnection.CreateCommand();
-        string sqlQuery = String.Format("INSERT INTO Puntaje(Score) values( \"(0)\" ,\"{1}\")" , s);
+        string sqlQuery = String.Format("INSERT INTO Puntaje(Puntaje) values(\"{0}\")", s);
         dbCommand.CommandText = sqlQuery;
         dbCommand.ExecuteScalar();
         //Cerramos la DB
         CerrarDB();
     }
 
-
+    
     //Método para mostrar el ranking en la UI
     void MostrarRanking()
     {
